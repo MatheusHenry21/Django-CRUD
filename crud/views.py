@@ -1,13 +1,20 @@
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest
 from . import forms
 
-# Hello world
+#HOME com POST
 def home_orm(request: HttpRequest):
+    return render(request, 'crud/html/index.html')
 
+def contato_post(request: HttpRequest): 
+    if request.method == 'POST':
+        formulario = forms.ContatoForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('crud:home')
+    
     context = {
-        'info': forms.ContatoForm
+        'info': forms.ContatoForm()
     }
-
-    return render(request, 'crud/html/index.html', context)
+    return render(request, 'crud/html/adicionar.html', context)
