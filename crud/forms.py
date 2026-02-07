@@ -5,7 +5,7 @@ from . import models
 class ContatoForm(ModelForm):
     class Meta:
         model = models.ContatoModel
-        field = [
+        fields = [
             'name',
             'phone'
         ]
