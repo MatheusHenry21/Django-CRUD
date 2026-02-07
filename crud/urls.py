@@ -5,5 +5,6 @@ app_name = 'crud'
 
 urlpatterns = [
     path('', views.home_orm, name='home'),
-    path('adicionar/', views.contato_post, name='adicionar')
+    path('adicionar/', views.contato_post, name='adicionar'),
+    path('listar/', views.contato_get, name='listar')
 ]

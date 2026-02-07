@@ -18,3 +18,10 @@ def contato_post(request: HttpRequest):
         'info': forms.ContatoForm()
     }
     return render(request, 'crud/html/adicionar.html', context)
+
+def contato_get(request: HttpRequest):
+    context = {
+        'info': forms.ContatoForm
+    }
+
+    return render(request, 'crud/html/listar.html', context)
