@@ -39,6 +39,15 @@
     a:hover{
         text-decoration: underline;
     }
+
+    table{
+        background-color: white;
+        color: black;
+        position: absolute;
+        left: 430px;
+        top: 200px;
+        font-size: 20px;
+    }
 </style>
 
 <body>
@@ -62,6 +71,5 @@
             {% endfor %}
         </tbody>
     </table>
-    <a href="{% url 'crud:home' %}">Voltar</a>
 </body>
 </html>

@@ -24,7 +24,7 @@ def contato_get(request):
     context = {
         'info': models.ContatoModel.objects.all()
     }
-
+    
     return render(request, 'crud/html/listar.html', context)
 
 def contato_patch(request: HttpRequest):
