@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest
 from . import forms
+from . import models
 
 #HOME com POST
 def home_orm(request: HttpRequest):
@@ -19,9 +20,9 @@ def contato_post(request: HttpRequest):
     }
     return render(request, 'crud/html/adicionar.html', context)
 
-def contato_get(request: HttpRequest):
+def contato_get(request):
     context = {
-        'info': forms.ContatoForm
+        'info': models.ContatoModel.objects.all()
     }
-
+    
     return render(request, 'crud/html/listar.html', context)
