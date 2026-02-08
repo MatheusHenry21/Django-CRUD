@@ -28,9 +28,18 @@
 
     button{
         background-color: rgb(13, 215, 20);
-        position: relative;
-        margin-top: 20px;
-        margin-left: 150px;
+        font-size: 11pt;
+    }
+
+    a{
+        background-color: red;
+        color: black;
+        text-decoration: none;
+        border: 3px solid black;
+        padding: 1px 5px 1px 5px;
+        font-size: 11pt;
+        display: inline-block;
+        margin-right: 85px;
     }
 </style>
 
@@ -38,7 +47,8 @@
     <h1>Adicione o contato</h1>
     <form action="" method="post">
         {% csrf_token %}
-        {{info}}
+        {{info}}<br/>
+        <a href="{% url 'crud:home' %}">Voltar</a>
         <button>Enviar</button>
     </form>
 </body>
