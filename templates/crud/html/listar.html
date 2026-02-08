@@ -45,6 +45,7 @@
     <h1>Contatos</h1>
     <table border="5">
         <thead>
+            <th>Id</th>
             <th>Nome</th>
             <th>Celular</th>
             <th>Data de criação</th>
@@ -53,6 +54,7 @@
         <tbody>
             {% for ctt in info %}
             <tr>
+                <td>{{ctt.id}}</td>
                 <td>{{ ctt.name }}</td>
                 <td>{{ ctt.phone }}</td>
                 <td>{{ ctt.date_created }}</td>
