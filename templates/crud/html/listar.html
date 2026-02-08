@@ -28,10 +28,11 @@
     a{
         position: absolute;
         right: 360px;
-        top: 330px;
-        padding: 10px;
+        top: 270px;
+        padding: 3px 10px 3px 10px;
         font-size: 15pt;
-        background-color: black;
+        background-color: red;
+        border: 3px solid black;
         color: white;
         text-decoration: none;
     }
@@ -45,13 +46,13 @@
         color: black;
         position: absolute;
         left: 430px;
-        top: 200px;
+        top: 150px;
         font-size: 20px;
     }
 </style>
 
 <body>
-    <h1>Contatos</h1>
+    <h1>Contatos salvos!</h1>
     <table border="5">
         <thead>
             <th>Id</th>
@@ -71,5 +72,6 @@
             {% endfor %}
         </tbody>
     </table>
+    <a href="{% url 'crud:home' %}">Voltar</a>
 </body>
 </html>
